@@ -63,12 +63,13 @@ Optional GPU acceleration
 
 ## Setup and usage
 
-1) Create a Python virtual environment and install packages
+1) Create a Conda environment and install packages
 
 ```powershell
-# From the repo root
-python -m venv .venv; .\.venv\Scripts\Activate.ps1; pip install --upgrade pip
-pip install scanpy anndata numpy pandas seaborn matplotlib scikit-learn xgboost joblib
+# Create and activate a conda environment (Python 3.10+)
+conda create -n ubic-omics-2025 python=3.10 -y; conda activate ubic-omics-2025
+# Install required Python packages (using conda-forge)
+conda install -y -c conda-forge scanpy anndata numpy pandas seaborn matplotlib scikit-learn joblib xgboost
 ```
 
 2) Install R packages (run inside R)
